@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/AppSidebar";
 
 const roboto_flex = Roboto_Flex({
   variable: "--font-roboto_flex",
@@ -21,17 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto_flex.variable} `}>
-        <SidebarProvider>
-          <AppSidebar />
-          <main className="w-full relative">
-            <SidebarTrigger className="absolute" />
-            <div className="lg:h-screen lg:min-h-screen lg:overflow-hidden">
-              {children}
-            </div>
-          </main>
-        </SidebarProvider>
-      </body>
+      <body className={`${roboto_flex.variable} `}>{children}</body>
     </html>
   );
 }

@@ -10,6 +10,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { ClockFading } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -36,13 +37,8 @@ export function AppSidebar() {
     <Sidebar className="bg-red-50" variant="inset">
       <SidebarHeader className="my-5">
         <div className="col-center">
-          <Image
-            src="/svg/logo.svg"
-            width={32}
-            height={32}
-            alt="logo"
-            className="mr-2"
-          />
+          <ClockFading className="size-10" />
+          <span className="sr-only">SuperFlow</span>
           <span className="text-red-950 text-lg font-bold">SuperFlow</span>
         </div>
       </SidebarHeader>
