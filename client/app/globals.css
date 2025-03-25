@@ -1,0 +1,127 @@
+@tailwind base;
+
+body {
+  @apply bg-red-50 font-robo_flex text-[var(--foreground)];
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem
+  ;
+    --background: #fee2e2;
+    --foreground: #450a0a;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --accent: #fef2f2;
+    --accent-foreground: 240 5.9% 10%;
+    --border: 220 13% 91%;
+    --ring: 217.2 91.2% 59.8%}
+  .dark {
+    --background: 240 5.9% 10%;
+    --foreground: 240 4.8% 95.9%;
+    --primary: 224.3 76.3% 48%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 240 4.8% 95.9%;
+    --border: 240 3.7% 15.9%;
+    --ring: 217.2 91.2% 59.8%
+  }
+}
+
+@layer utilities {
+.container_fluid {
+    @apply container mx-auto px-8 md:px-12 lg:px-16 xl:px-20;
+}
+
+/* Rows */
+.inline-start {
+    @apply inline-flex items-center justify-start;
+}
+
+.inline-center {
+    @apply inline-flex items-center justify-center;
+}
+
+.inline-start-center {
+    @apply inline-flex items-center justify-start;
+}
+
+.inline-end {
+    @apply inline-flex items-center justify-end;
+}
+
+.inline-between {
+    @apply inline-flex items-center justify-between;
+}
+
+.inline-evenly {
+    @apply inline-flex items-center justify-evenly;
+}
+
+.start {
+    @apply flex items-center justify-start;
+}
+
+.start-start {
+    @apply flex items-start justify-start;
+}
+
+.center-start {
+    @apply flex items-start justify-center;
+}
+
+.center {
+    @apply flex items-center justify-center;
+}
+
+.end {
+    @apply flex items-center justify-end;
+}
+
+.between {
+    @apply flex flex-row items-center justify-between;
+}
+
+.between-start {
+    @apply flex flex-row items-start justify-between;
+}
+
+.evenly {
+    @apply flex items-center justify-evenly;
+}
+
+.around {
+    @apply flex items-center justify-around;
+}
+
+/* Cols */
+.col-start {
+    @apply flex flex-col items-start justify-center;
+}
+
+.col-start-start {
+    @apply flex flex-col items-start justify-start;
+}
+
+.col-center {
+    @apply flex flex-col items-center justify-center;
+}
+
+.inline-col-center {
+    @apply inline-flex flex-col items-center justify-center;
+}
+
+.col-end {
+    @apply flex flex-col items-end justify-center;
+}
+
+.col-between {
+    @apply flex flex-col items-start justify-between;
+}
+.col-start-center {
+@apply flex flex-col items-center justify-start;
+}
+}
